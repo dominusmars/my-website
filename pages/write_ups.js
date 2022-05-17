@@ -24,7 +24,7 @@ function Write_ups() {
                 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;1,200&display=swap" rel="stylesheet" />
 
             </Head>
-            <Navbar />
+            <Navbar active="Writeups" />
             <div className={styles.main_container}>
                 <div className={styles.title}>Write Ups</div>
                 <div>

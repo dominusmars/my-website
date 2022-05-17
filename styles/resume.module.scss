@@ -1,0 +1,95 @@
+.container{
+    background-color: rgb(174, 174, 174);
+}
+.first{
+    padding-top: 200px;
+}
+.text_container{
+    display: flex;
+    .title{
+        margin: 100px;
+        margin-top: 0;
+        font-family: 'IBM Plex Sans';
+        font-size: 70px;
+        font-weight: 900;
+        width: 30%;
+        color: rgb(146, 114, 75);
+
+
+    }
+    .content{
+        width: 50%;
+        .download_button{
+            margin-bottom: 40px;
+            .button{
+                cursor: pointer;
+                color: rgb(169, 129, 129);
+                margin-left: 40%;
+                padding: 20px;
+                border-radius: 30px;
+                width: fit-content;
+                background-color: rgb(146, 114, 75);
+                right: 10px;
+            }
+            .button:hover{
+                background-color: rgba(146, 114, 75, 0.758);
+            }
+        }
+        .content_container{
+            padding-bottom: 20px;
+        }
+        .title_content{
+            font-family: 'IBM Plex Sans';
+            font-size: large;
+            font-size: 40px;
+            font-weight: 500;
+            padding: 30px;
+            padding-top: 0;
+            color: rgb(146, 114, 75);
+
+            padding-left: 0;
+        }
+        .subtitle{
+            font-family: 'IBM Plex Sans';
+            font-size: large;
+            font-size: 25px;
+            font-weight: 400;
+        }
+        .content_info{
+            font-family: 'IBM Plex Sans';
+            font-size: 20px;
+            font-weight: 300;
+            padding-top: 10px;
+            padding-left: 30px;
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    flex: 1;
+    padding: 2rem 0;
+    border-top: 1px solid #eaeaea;
+    font-family: 'IBM Plex Sans';
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+  }
+  
+  .footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+  .logo {
+    height: 1em;
+    margin-left: 0.5rem;
+  }
+  
+  @media (max-width: 600px) {
+    .grid {
+      width: 100%;
+      flex-direction: column;
+    }
+  }

@@ -12,8 +12,8 @@ function Textfile({ name, data }) {
     }, [name]);
     return (
         <div className={styles.main_container}>
-            <div className={styles.name_of_text}>
-                <div className={styles.name} onClick={onClick}>
+            <div className={styles.name_of_text} onClick={onClick}>
+                <div className={styles.name} >
                     {title}
                 </div>
                 <div className={styles.arrow}>

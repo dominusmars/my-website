@@ -25,9 +25,13 @@
     font-family: 'IBM Plex Sans';
 }
 
+
 .nav_item{
+    cursor: pointer;   
+}
+.nav_curr{
     cursor: pointer;
-   
+    color: gray;
 }
 .nav_item:hover{
     opacity: 0.5;

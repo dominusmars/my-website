@@ -3,12 +3,13 @@ import styles from '../../styles/Navbar.module.scss'
 import Image from 'next/image'
 import Link from "next/link"
 
-function Navbar() {
+function Navbar({ active }) {
     const [redirects, setRedirects] = useState([
         "https://github.com/dominusmars",
         "https://www.instagram.com/mohamad_khawam/",
         "https://twitter.com/Dominusmars"
     ]);
+    const [page, setPage] = useState(0);
     function redirectGithub() {
         window.location.href = redirects[0];
     }
@@ -19,7 +20,6 @@ function Navbar() {
         window.location.href = redirects[2];
     }
     useEffect(() => {
-        document.title = "Mohamad Khawam";
         function movedNav(win) {
             var e = document.getElementsByClassName(styles.nav_body)[0]
             if (window.scrollY == 0) {
@@ -40,6 +40,23 @@ function Navbar() {
         }
         window.addEventListener('scroll', (e) => movedNav(e))
         movedNav(window)
+        switch (active) {
+            case "Home":
+                setPage(0)
+                break;
+            case "Resume":
+                setPage(1)
+                break;
+            case "Writeups":
+                setPage(2)
+                break;
+            case "projects":
+                setPage(3)
+                break;
+            default:
+
+                break;
+        }
     })
     return (
         <div className={styles.nav_body}>
@@ -48,22 +65,22 @@ function Navbar() {
             </div>
             <div className={styles.nav_items}>
                 <Link href={"/"}>
-                    <div className={styles.nav_item + " " + styles.nav_item_name}>
+                    <div className={(page == 0 ? styles.nav_curr : styles.nav_item) + " " + styles.nav_item_name}>
                         Home
                     </div>
                 </Link>
                 <Link href={"/resume"}>
-                    <div className={styles.nav_item + " " + styles.nav_item_name}>
+                    <div className={(page == 1 ? styles.nav_curr : styles.nav_item) + " " + styles.nav_item_name}>
                         Resume
                     </div>
                 </Link>
                 <Link href={"/write_ups"}>
-                    <div className={styles.nav_item + " " + styles.nav_item_name}>
+                    <div className={(page == 2 ? styles.nav_curr : styles.nav_item) + " " + styles.nav_item_name}>
                         Write Ups
                     </div>
                 </Link>
                 <Link href={"projects"}>
-                    <div className={styles.nav_item + " " + styles.nav_item_name}>
+                    <div className={(page == 3 ? styles.nav_curr : styles.nav_item) + " " + styles.nav_item_name}>
                         Projects
                     </div>
                 </Link>
