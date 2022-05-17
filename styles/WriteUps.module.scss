@@ -1,0 +1,46 @@
+.container {
+    overflow-x: hidden;
+    width: 100vw;
+    background: rgb(174, 174, 174);
+
+  }
+.main_container{
+    // justify-content: center;
+    padding: 100px;
+    display: flex;
+    .title{
+        font-family: 'IBM Plex Sans';
+        font-size: larger;
+        font-weight: 600;
+    }
+}
+
+.footer {
+    display: flex;
+    flex: 1;
+    padding: 2rem 0;
+    border-top: 1px solid #eaeaea;
+    background-color: white;
+    font-family: 'IBM Plex Sans';
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+  .logo {
+    height: 1em;
+    margin-left: 0.5rem;
+  }
+  
+  @media (max-width: 600px) {
+    .grid {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+  
