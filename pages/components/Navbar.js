@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from "next/link"
 
 function Navbar() {
-    const [redirects, setredirects] = useState([
+    const [redirects, setRedirects] = useState([
         "https://github.com/dominusmars",
         "https://www.instagram.com/mohamad_khawam/",
         "https://twitter.com/Dominusmars"
@@ -44,7 +44,7 @@ function Navbar() {
     return (
         <div className={styles.nav_body}>
             <div className={styles.icon_picture}>
-                <Image src="/icon.png" width={40} height={40} />
+                <Image src="/icon.png" alt='icon' width={40} height={40} />
             </div>
             <div className={styles.nav_items}>
                 <Link href={"/"}>
@@ -68,11 +68,11 @@ function Navbar() {
                     </div>
                 </Link>
 
-                <Image src="/insta.svg" width={25} height={25} className={styles.nav_item} onClick={redirectInsta}>
+                <Image src="/insta.svg" alt='insta' width={25} height={25} className={styles.nav_item} onClick={redirectInsta}>
                 </Image>
-                <Image src="/twitter.svg" width={25} height={25} className={styles.nav_item} onClick={redirectTwitter}>
+                <Image src="/twitter.svg" alt='twitter' width={25} height={25} className={styles.nav_item} onClick={redirectTwitter}>
                 </Image>
-                <Image src="/github.svg" width={25} height={25} className={styles.nav_item} onClick={redirectGithub} >
+                <Image src="/github.svg" alt='github' width={25} height={25} className={styles.nav_item} onClick={redirectGithub} >
                 </Image>
             </div>
         </div >

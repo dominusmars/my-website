@@ -1,20 +1,23 @@
 import React, { useState, useEffect } from 'react'
 import styles from "../../styles/textfile.module.scss"
 import Image from 'next/image';
-function textfile({ name, data }) {
+function Textfile({ name, data }) {
     const [toggle, settoggle] = useState(false);
+    const [title, setTitle] = useState(name)
     function onClick() {
         settoggle(!toggle)
     }
-    var nameEdited = name.split('.')[0]
+    useEffect(() => {
+        setTitle(name.split('.')[0])
+    }, [name]);
     return (
         <div className={styles.main_container}>
             <div className={styles.name_of_text}>
                 <div className={styles.name} onClick={onClick}>
-                    {nameEdited}
+                    {title}
                 </div>
                 <div className={styles.arrow}>
-                    <Image src={toggle ? "/downarrow.svg" : "/nextarrow.svg"} height={15} width={15} />
+                    <Image src={toggle ? "/downarrow.svg" : "/nextarrow.svg"} alt="arrow" height={15} width={15} />
                 </div>
             </div>
 
@@ -27,4 +30,4 @@ function textfile({ name, data }) {
     )
 }
 
-export default textfile
+export default Textfile
