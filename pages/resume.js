@@ -4,6 +4,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Navbar from './components/Navbar'
 function Resume() {
+
+    function downloadRes() {
+        window.location.href = "/api/resume"
+    }
     return (
         <div className={styles.container}>
             <Head>
@@ -99,7 +103,7 @@ function Resume() {
                         </div>
                     </div>
                     <div className={styles.download_button}>
-                        <div className={styles.button}>
+                        <div className={styles.button} onClick={downloadRes}>
                             Download Resume PDF
                         </div>
                     </div>
