@@ -6,25 +6,37 @@
 }
 .text_container{
     display: flex;
+    justify-content: center;
+    padding: 100px;
+    padding-top: 200px;
+
     .title{
-        margin: 100px;
+        margin-right:0px ;
         margin-top: 0;
+        padding: 10px;
+        padding-right: 10%;
         font-family: 'IBM Plex Sans';
-        font-size: 70px;
+        font-size: 100px;
         font-weight: 900;
-        width: 30%;
         color: rgb(146, 114, 75);
-
-
+        background-color: rgb(164, 164, 164);
+    box-shadow: 0 30px 40px rgba(0,0,0,.1);
+        
     }
     .content{
-        width: 50%;
+        width: 60%;
+        background-color: rgb(151, 151, 151);
+        padding: 10px;
+        border-left: 2px solid black;
+        box-shadow: 0 30px 40px rgba(0,0,0,.1);
+
         .download_button{
             margin-bottom: 40px;
             .button{
+                box-shadow: 0 10px 20px rgba(0,0,0,.1);
                 cursor: pointer;
-                color: rgb(169, 129, 129);
-                margin-left: 40%;
+                color: rgb(113, 89, 89);
+                margin-left: 60%;
                 padding: 20px;
                 border-radius: 30px;
                 width: fit-content;
