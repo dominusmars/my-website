@@ -27,7 +27,7 @@ function Write_ups() {
             <Navbar active="Writeups" />
             <div className={styles.main_container}>
                 <div className={styles.title}>Write Ups</div>
-                <div>
+                <div className={styles.writeups}>
                     {writeUps.map((obj, k) => {
                         return (
                             <Textfile key={k} name={obj.name} data={obj.data} />
