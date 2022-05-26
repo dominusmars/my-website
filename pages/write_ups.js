@@ -5,12 +5,14 @@ import styles from "../styles/WriteUps.module.scss"
 import Navbar from './components/Navbar'
 import Textfile from './components/Textfile'
 import axios from "axios"
+import LoadingDots from "./components/LoadingDots"
 function Write_ups() {
     const [writeUps, setwriteUps] = useState([]);
     useEffect(() => {
         axios.get('/api/writeups').then(res => {
             setwriteUps(res.data)
         })
+        setwriteUps(false)
     }, []);
 
     return (
@@ -28,7 +30,10 @@ function Write_ups() {
             <div className={styles.main_container}>
                 <div className={styles.title}>Write Ups</div>
                 <div className={styles.writeups}>
-                    {writeUps.map((obj, k) => {
+                    {!writeUps && <div className={styles.loading}>
+                        <LoadingDots />
+                    </div>}
+                    {writeUps && writeUps.map((obj, k) => {
                         return (
                             <Textfile key={k} name={obj.name} data={obj.data} />
                         )
