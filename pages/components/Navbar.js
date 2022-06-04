@@ -50,7 +50,7 @@ function Navbar({ active }) {
             case "Writeups":
                 setPage(2)
                 break;
-            case "projects":
+            case "Projects":
                 setPage(3)
                 break;
             default:
@@ -79,7 +79,7 @@ function Navbar({ active }) {
                         Write Ups
                     </div>
                 </Link>
-                <Link href={"projects"}>
+                <Link href={"/Projects"}>
                     <div className={(page == 3 ? styles.nav_curr : styles.nav_item) + " " + styles.nav_item_name}>
                         Projects
                     </div>

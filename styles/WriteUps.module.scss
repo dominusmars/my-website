@@ -9,19 +9,22 @@
 .main_container{
     // justify-content: center;
     padding: 100px;
-    display: flex;
+    // display: flex;
     .title{
-        font-family: 'IBM Plex Sans';
-        font-size: larger;
-        font-weight: 600;
+      font-family: 'IBM Plex Sans';
+      font-size: large;
+      font-size: 40px;
+      font-weight: 500;
+      padding-top: 0;
+      color: rgb(146, 114, 75);
+        margin-bottom: 30px;
     }
 }
 .loading{
-  margin: 40px;
+  margin: 100px;
 }
 .writeups{
   background: rgba(255, 254, 254, 0);
-  margin-left:40px ;
   user-select: none;
 }
 .footer {

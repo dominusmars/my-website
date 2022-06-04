@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Head from "next/head"
-import Image from 'next/image'
 import styles from "../styles/WriteUps.module.scss"
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 import Textfile from './components/Textfile'
 import axios from "axios"
 import LoadingDots from "./components/LoadingDots"
@@ -41,25 +41,7 @@ function Write_ups() {
                 </div>
 
             </div>
-            <footer className={styles.footer}>
-                <a
-                    href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Powered by{' '}
-                    <span className={styles.logo}>
-                        <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-                    </span>
-
-                </a>
-                <a>
-                    Created With{' '}
-                    <span className={styles.logo}>
-                        <Image src="/Nextjs-logo.svg" alt="Next JS Logo" width={72} height={16} />
-                    </span>
-                </a>
-            </footer>
+            <Footer />
         </div>
     )
 }

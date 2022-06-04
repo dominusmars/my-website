@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.scss'
 import Navbar from './components/Navbar'
 
 import { useEffect, useState } from 'react'
+import Footer from './components/Footer'
 export default function Home() {
 
   return (
@@ -52,26 +53,7 @@ export default function Home() {
       </div>
 
 
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-
-        </a>
-        <a>
-          Created With{' '}
-          <span className={styles.logo}>
-            <Image src="/Nextjs-logo.svg" alt="Next JS Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <Footer />
     </div>
   )
 }
