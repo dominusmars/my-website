@@ -61,7 +61,7 @@ function Navbar({ active }) {
     return (
         <div className={styles.nav_body}>
             <div className={styles.icon_picture}>
-                <Image src="/icon.png" alt='icon' width={40} height={40} />
+                <Image src="/favicon.ico" alt='icon' width={40} height={40} />
             </div>
             <div className={styles.nav_items}>
                 <Link href={"/"}>
