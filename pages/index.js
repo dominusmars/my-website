@@ -39,9 +39,14 @@ export default function Home() {
       <div className={styles.third_container}></div>
       <div className={styles.text_container}>
         <div className={styles.info_container}>
+          <div className={styles.title}>How I learned Javascript</div>
+          <div className={styles.paragraph}>I first started coding in Java and C#. Slowly I learned the key concepts of programming. Through abstractions I was able to apply what I know to Javascript. A friend of mine wanted a way to mimic an anti-botting script called akamai. This was back in the days where akamai's was at version 2. I took the task to reverse engineer the script from scratch. With no knowledge of Javascript I set out to the task. Through this process I learned the inner workings of Javascript and successfully reverse engineered the script. I eventually made my way to learning node.js and the rest is now history</div>
+        </div>
+        <div className={styles.info_container}>
           <div className={styles.title}>Design</div>
           <div className={styles.paragraph}>Designing projects is hard work, but reducing the problem into its parts helps you take it step by step. Take time to understand the problem that your looking to fix. Develop a plan to tackle it.</div>
         </div>
+
       </div>
       <div className={styles.fifth_container}></div>
       <div className={styles.text_container}>
