@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styles from '../../styles/Navbar.module.scss'
+import mobileStyles from '../../styles/mobile/Navbar.module.scss'
 import Image from 'next/image'
 import Link from "next/link"
 
@@ -20,7 +21,7 @@ function Navbar({ active }) {
         window.location.href = redirects[2];
     }
     useEffect(() => {
-        function movedNav(win) {
+        const movedNav = () => {
             var e = document.getElementsByClassName(styles.nav_body)[0]
             if (window.scrollY == 0) {
                 e.style.backgroundColor = "rgba(255, 255, 255, 0)"
@@ -38,7 +39,7 @@ function Navbar({ active }) {
             e.style.color = `rgba(0, 0, 0, 1)`
 
         }
-        window.addEventListener('scroll', (e) => movedNav(e))
+        window.addEventListener('scroll', movedNav)
         movedNav(window)
         switch (active) {
             case "Home":
@@ -54,10 +55,11 @@ function Navbar({ active }) {
                 setPage(3)
                 break;
             default:
-
                 break;
         }
-    })
+        return () => window.removeEventListener('scroll', movedNav)
+    }, [])
+
     return (
         <div className={styles.nav_body}>
             <div className={styles.icon_picture}>

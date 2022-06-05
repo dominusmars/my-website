@@ -1,5 +1,6 @@
 .container{
     background-color: rgb(174, 174, 174);
+    width: 100vw;
 }
 .first{
     padding-top: 200px;
@@ -86,22 +87,4 @@
     justify-content: center;
     align-items: center;
     background-color: whitesmoke;
-  }
-  
-  .footer a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-  }
-  .logo {
-    height: 1em;
-    margin-left: 0.5rem;
-  }
-  
-  @media (max-width: 600px) {
-    .grid {
-      width: 100%;
-      flex-direction: column;
-    }
   }

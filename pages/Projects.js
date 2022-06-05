@@ -1,13 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
+import NavBarMobile from './components/mobile/NavBarMobile'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from "../styles/Projects.module.scss"
+import stylesDesktop from "../styles/Projects.module.scss"
+import stylesMobile from "../styles/mobile/Projects.module.scss"
 function Projects() {
     function linkToAccretion() {
         window.location.href = "https://www.accretionnft.com"
     }
+    const [mobile, setMobile] = useState(1);
+    const updateDim = () => {
+        const mobile = window.innerWidth < 1300
+        setMobile(mobile)
+    }
+    useEffect(() => {
+        updateDim()
+        window.addEventListener("resize", updateDim);
+        return () =>
+            window.removeEventListener("resize", updateDim);
+    }, [])
+    var styles = mobile ? stylesMobile : stylesDesktop;
     return (
         <div>
             <Head>
@@ -18,9 +32,10 @@ function Projects() {
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
                 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;1,200&display=swap" rel="stylesheet" />
             </Head>
-            <Navbar active="Projects" />
+            {mobile ? <NavBarMobile active={"Projects"} /> : <Navbar active={"Projects"} />}
             <div className={styles.body}>
                 <div className={styles.top_padding}></div>
+                <div className={styles.page_title}>Projects</div>
                 <div className={styles.first_container}>
                     <div className={styles.text_container}>
                         <div className={styles.title}>

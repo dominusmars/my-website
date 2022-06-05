@@ -1,0 +1,24 @@
+.container {
+    overflow-x: hidden;
+    width: 100vw;
+    background: rgb(174, 174, 174);
+    padding-top: 6em;
+}
+.main_container{
+    .title{
+      font-family: 'IBM Plex Sans';
+      font-size: large;
+      font-size: 40px;
+      font-weight: 500;
+      padding-top: 0;
+      color: rgb(146, 114, 75);
+        margin-bottom: 30px;
+    }
+}
+.loading{
+    margin: 100px;
+}
+.writeups{
+    user-select: none;
+    padding-bottom: 100px;
+}

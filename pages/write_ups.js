@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import Head from "next/head"
-import styles from "../styles/WriteUps.module.scss"
+import stylesDesktop from "../styles/WriteUps.module.scss"
+import stylesMobile from "../styles/mobile/WriteUps.module.scss"
 import Navbar from './components/Navbar'
+import NavBarMobile from './components/mobile/NavBarMobile'
 import Footer from './components/Footer'
 import Textfile from './components/Textfile'
 import axios from "axios"
@@ -14,7 +16,18 @@ function Write_ups() {
         })
         setwriteUps(false)
     }, []);
-
+    const [mobile, setMobile] = useState(1);
+    const updateDim = () => {
+        const mobile = window.innerWidth < 1300
+        setMobile(mobile)
+    }
+    useEffect(() => {
+        updateDim()
+        window.addEventListener("resize", updateDim);
+        return () =>
+            window.removeEventListener("resize", updateDim);
+    }, [])
+    var styles = mobile ? stylesMobile : stylesDesktop;
     return (
         <div className={styles.container}>
             <Head>
@@ -26,7 +39,7 @@ function Write_ups() {
                 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;1,200&display=swap" rel="stylesheet" />
 
             </Head>
-            <Navbar active="Writeups" />
+            {mobile ? <NavBarMobile active={"Writeups"} /> : <Navbar active={"Writeups"} />}
             <div className={styles.main_container}>
                 <div className={styles.title}>Write Ups</div>
                 <div className={styles.writeups}>
@@ -35,7 +48,7 @@ function Write_ups() {
                     </div>}
                     {writeUps && writeUps.map((obj, k) => {
                         return (
-                            <Textfile key={k} name={obj.name} data={obj.data} />
+                            <Textfile mobile={mobile} key={k} name={obj.name} data={obj.data} />
                         )
                     })}
                 </div>

@@ -1,0 +1,71 @@
+.container{
+    background-color: rgb(174, 174, 174);
+    width: 100vw;
+}
+.first{
+    padding-top: 6em;
+}
+.text_container{
+    .title{
+        margin-right:0px ;
+        margin-top: 0;
+        padding: 10px;
+        padding-right: 10%;
+        font-family: 'IBM Plex Sans';
+        font-size: 100px;
+        font-weight: 900;
+        color: rgb(146, 114, 75);
+        box-shadow: 0 30px 40px rgba(0,0,0,.1);
+        border-bottom: 2px solid black;        
+    }
+    .content{
+        background-color: rgb(151, 151, 151);
+        padding: 20px;
+        box-shadow: 0 30px 40px rgba(0,0,0,.1);
+    }
+    .download_button{
+        margin-bottom: 40px;
+        .button{
+            box-shadow: 0 10px 20px rgba(0,0,0,.1);
+            cursor: pointer;
+            color: rgb(113, 89, 89);
+            margin-left: 60%;
+            padding: 20px;
+            border-radius: 30px;
+            width: fit-content;
+            background-color: rgb(146, 114, 75);
+            right: 10px;
+            text-align: center;
+        }
+        .button:hover{
+            background-color: rgba(146, 114, 75, 0.758);
+        }
+    }
+    .content_container{
+        padding-bottom: 20px;
+    }
+    .title_content{
+        font-family: 'IBM Plex Sans';
+        font-size: large;
+        font-size: 40px;
+        font-weight: 500;
+        padding: 30px;
+        padding-top: 0;
+        color: rgb(146, 114, 75);
+
+        padding-left: 0;
+    }
+    .subtitle{
+        font-family: 'IBM Plex Sans';
+        font-size: large;
+        font-size: 25px;
+        font-weight: 400;
+    }
+    .content_info{
+        font-family: 'IBM Plex Sans';
+        font-size: 20px;
+        font-weight: 300;
+        padding-top: 10px;
+        padding-left: 30px;
+    }
+}

@@ -1,0 +1,75 @@
+@import '../animations.scss';
+.nav_body{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0);
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.nav_top_menu{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    z-index: 999;
+    align-items: center;
+    background-color: white;
+}
+
+.nav_item_name{
+    z-index: 999;
+    padding: 10px;
+}
+.nav_item_name:hover{
+    color: rgb(146, 114, 75);
+}
+.nav_item{
+    z-index: 999;
+    margin: 10px;
+    padding: 10px;
+}
+
+.nav_curr{
+    cursor: pointer;
+    color: gray;
+    
+}
+.toggle{
+    margin: 10px;
+    z-index: 999;
+}
+.icon_picture{
+    position: absolute;
+    right:  10px;
+    z-index: 999;
+
+}
+.nav_bottom_menu{
+    animation: fade_in 1s;
+    text-align: center;
+    background-color: rgb(113, 112, 112);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+}
+.nav_cover{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    overflow-y: hidden;
+    animation: fade_in 1s;
+    background-color: rgba(255, 255 , 255, 0.2);
+}
+.icons{
+    display: flex;
+    justify-content: center;
+}
+.icons:nth-child(2){
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.icon{
+    padding: 10px;
+}

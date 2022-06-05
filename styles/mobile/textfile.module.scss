@@ -1,0 +1,27 @@
+.name_of_text{
+    display: flex;
+    cursor: pointer;
+    padding: 20px;
+    width: fit-content;
+    background: rgb(124, 124, 124);
+}
+.name{
+    width: 200px;
+}
+.name_of_text:hover{
+    opacity: 0.6;
+}
+.arrow{
+    margin-left: 50px;
+}
+.data{
+    font-family: 'IBM Plex Sans';
+    font-size: medium;
+    font-weight: 300;
+    background: rgb(167, 166, 166);
+    padding: 10px;
+    border-left: 3px solid black;
+    border-bottom: thick double black;
+    margin: 0px;
+    white-space: pre-line;
+}

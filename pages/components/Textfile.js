@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import styles from "../../styles/textfile.module.scss"
+import stylesDesktop from "../../styles/textfile.module.scss"
+import stylesMobile from "../../styles/mobile/textfile.module.scss"
 import Image from 'next/image';
-function Textfile({ name, data }) {
+function Textfile({ name, data, mobile }) {
     const [toggle, settoggle] = useState(false);
     const [title, setTitle] = useState(name)
     function onClick() {
@@ -10,6 +11,7 @@ function Textfile({ name, data }) {
     useEffect(() => {
         setTitle(name.split('.')[0])
     }, [name]);
+    var styles = mobile ? stylesMobile : stylesDesktop;
     return (
         <div className={styles.main_container}>
             <div className={styles.name_of_text} onClick={onClick}>

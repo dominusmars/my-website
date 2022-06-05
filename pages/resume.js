@@ -1,14 +1,28 @@
-import React from 'react'
-import styles from '../styles/resume.module.scss'
+import React, { useState, useEffect } from 'react'
+import stylesD from '../styles/resume.module.scss'
+import mobileS from "../styles/mobile/resume.module.scss"
 import Head from 'next/head'
 import Image from 'next/image'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-function Resume() {
+import NavBarMobile from './components/mobile/NavBarMobile'
 
+function Resume() {
+    const [mobile, setMobile] = useState(1);
+    const updateDim = () => {
+        const mobile = window.innerWidth < 1300
+        setMobile(mobile)
+    }
+    useEffect(() => {
+        updateDim()
+        window.addEventListener("resize", updateDim);
+        return () =>
+            window.removeEventListener("resize", updateDim);
+    }, [])
     function downloadRes() {
         window.location.href = "/api/resume"
     }
+    var styles = mobile ? mobileS : stylesD;
     return (
         <div className={styles.container}>
             <Head>
@@ -20,7 +34,7 @@ function Resume() {
                 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;1,200&display=swap" rel="stylesheet" />
 
             </Head>
-            <Navbar active="Resume" />
+            {mobile ? <NavBarMobile active={"Resume"} /> : <Navbar active={"Resume"} />}
             <div className={styles.first + ' ' + styles.text_container}>
                 <div className={styles.title}>Resume</div>
                 <div className={styles.content}>
@@ -92,7 +106,7 @@ function Resume() {
                         </div>
                         <div className={styles.content_info}>Knowledge of HTML, CSS, and JavaScript
                         </div>
-                        <div className={styles.content_info}>Knowledge of Java, C#, and Phyton
+                        <div className={styles.content_info}>Knowledge of Java, C#, and Python
                         </div>
                         <div className={styles.content_info}>Ability to use and operate Linux through command line
                         </div>
