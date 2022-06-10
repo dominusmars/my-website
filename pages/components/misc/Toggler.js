@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from "../../../styles/misc/Toggler.module.scss"
 
 function Toggler({ setter, set }) {
     const [Active, setActive] = useState(0);
+    useEffect(() => {
+        setActive(set)
+    }, [set]);
     var activate = () => {
-        setActive(!Active)
         setter(!set)
     }
     return (
