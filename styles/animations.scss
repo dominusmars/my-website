@@ -6,3 +6,18 @@
         opacity: 100%;
     }
 }
+@keyframes moveDown{
+    0%{
+        opacity: 0%;
+        height: 0px;
+        display: none;
+    }
+    100%{
+        display: block;
+        height: 100%;
+        opacity: 100%;
+        z-index: 999;
+        padding: 10px;
+        margin: 10px;
+    }
+}

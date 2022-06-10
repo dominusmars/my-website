@@ -124,7 +124,9 @@ function NavBarMobile({ active }) {
                     </div>
                 </div>
             )}
-            {toggle && <span className={styles.nav_cover}></span>}
+            {toggle && <span className={styles.nav_cover} onClick={() => {
+                setToggle(!toggle)
+            }}></span>}
         </div>
     )
 }
