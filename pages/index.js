@@ -34,7 +34,7 @@ export default function Home() {
       <div className={styles.first_container}>
         <div className={styles.title_container}>
           <div className={styles.main_title}>Mohamad Khawam</div>
-          <div className={styles.sub_title}>With Time Anything is Possible</div>
+          <div className={styles.sub_title}>Full-Stack Developer</div>
         </div>
       </div>
       <div className={styles.text_container}>
